@@ -1,11 +1,5 @@
-//extern crate dotenv;
-
 use dotenv::dotenv;
-//#[allow(unused_imports)]
-//use std::env;
-
-//extern crate pretty_env_logger;
-#[macro_use] extern crate log;
+use log::*;
 
 fn main() {
     dotenv().ok();
