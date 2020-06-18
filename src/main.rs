@@ -1,4 +1,5 @@
 mod dicts;
+mod word;
 
 use dotenv::dotenv;
 use log::*;
