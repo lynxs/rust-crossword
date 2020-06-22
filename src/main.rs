@@ -35,4 +35,6 @@ fn main() {
 
     let blacklist = dicts::get_blacklist_words(blacklist_path).unwrap();
     println!("{} blacklist words readed", blacklist.len());
+
+    word::is_same_chars_bits("клоун", "лук");
 }
