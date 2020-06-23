@@ -41,15 +41,17 @@ fn main() {
 
     let set = "бортса";
     let sort_by_len_then_by_str = |w1: &&String, w2: &&String| w1.len().cmp(&w2.len()).then(w1.cmp(w2));
-    //for w in words.iter().filter(|x| x.chars().count() > 2).sorted_by(|w1,w2| w1.len().cmp(&w2.len()).then(w1.cmp(w2))).unique() {
-    let words = all_words.iter()
+    let words: Vec<&String> = all_words.iter()
                          .filter(|x| x.chars().count() > 2)
                          .sorted_by(sort_by_len_then_by_str)
                          .unique()
-                         .filter(|x| word::is_same_chars_bits(set, &x));       
+                         .filter(|x| word::is_same_chars_bits(set, &x))
+                         .collect();
+
+    //let words_copies: Vec<String> = words.iter().map(|&s| s.clone()).collect();
+    //words.iter().for_each(|w| println!("{}, len: {}", w, w.len()));
+    
     for w in words {
-        //if word::is_same_chars_bits(set, &w) {
-            println!("{}, len: {}", w, w.len());
-        //}
+        println!("{}, len: {}", w, w.len());
     }
 }
