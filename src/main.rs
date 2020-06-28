@@ -51,7 +51,10 @@ fn main() {
     //let words_copies: Vec<String> = words.iter().map(|&s| s.clone()).collect();
     //words.iter().for_each(|w| println!("{}, len: {}", w, w.len()));
     
-    for w in words {
-        println!("{}, len: {}", w, w.len());
+    println!("Set: {}", set);
+    println!("Words:");
+    for (i,w) in words.iter().enumerate() {
+        println!("    {}. {}", i, w);
     }
+    println!("Total words: {}", words.len());
 }

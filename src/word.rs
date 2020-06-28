@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 fn is_same_chars(set: &str, word: &str) -> bool {
     let mut set_chars: Vec<char> = set.chars().collect();
     for c in word.chars() {
